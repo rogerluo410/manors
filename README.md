@@ -29,10 +29,10 @@ Please feel free to use a different markup language if you do not plan to run
 
 == Setup Marons environment    
 1. Create Marons    
-`rails new marons --skip-active-record`, then, `bundle install`   
-rails version is bigger than 4.2.  
+`rails new marons --skip-active-record`, then, `bundle install`        
+rails version is bigger than 4.2.   
 
-2. Add MongoDB access suite in Rails via `bundle install`
+2. Add MongoDB access suite in Rails via `bundle install`       
 ```
 In gemfile:
 
