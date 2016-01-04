@@ -1,4 +1,4 @@
-== README
+#README   
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -21,15 +21,15 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ...   
 
 
 Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.     
+<tt>rake doc:app</tt>.       
 
-== Setup Marons environment    
+#Setup Marons environment    
 1. Create Marons    
-`rails new marons --skip-active-record`, then, `bundle install`        
+`rails new marons --skip-active-record`, then, `bundle install`         
 rails version is bigger than 4.2.   
 
 2. Add MongoDB access suite in Rails via `bundle install`       
@@ -40,6 +40,4 @@ gem 'mongoid', '~>5.0.0'
 gem "bson_ext"
 ```  
 and, create mongoDB configuring file `./config/mongoid.yml` with command `rails g mongoid:config`     
-
-3. 
 
