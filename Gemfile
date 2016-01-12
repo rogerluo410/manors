@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Access MongoDB
 gem 'mongoid', '~> 5.0.0'
 gem "bson_ext"
+
+gem 'slim'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
