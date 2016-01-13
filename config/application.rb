@@ -31,5 +31,13 @@ module Manors
     config.generators do |g|
       g.orm :mongoid
     end
+
+    #使用slim模板引擎 和 sass 样式
+    config.sass.preferred_syntax= :sass
+
+    config.generators do |g|
+      g.template_engine :slim
+    end
+
   end
 end
