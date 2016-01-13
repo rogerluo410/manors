@@ -1,0 +1,17 @@
+.content
+  ul.breadcrumb
+    li 
+      | Candidates
+      span.divider 
+        | &raquo;
+    li.active Create
+  div.page-container
+    = form_for @post, :html => { :class => 'form-horizontal' }  do |f|
+      = f.error_messages
+      = render 'form', :f => f
+      = render :partial => 'openings/opening_selection', :locals => { :prompt => true }
+      .control-group
+        .controls
+          .actions
+            = f.submit 'Save', :class => 'btn btn-primary'
+            = link_to 'Cancel', :back, :class => 'btn'
