@@ -1,2 +1,8 @@
 
-p Welcome to Marons!
+div id="posts"
+ p All Posts : 
+ table
+  - @posts.each do | post |
+   tr
+    p "post: "
+     - post.content

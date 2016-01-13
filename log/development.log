@@ -1000,3 +1000,103 @@ Started GET "/" for ::1 at 2016-01-13 12:35:44 +0800
 Processing by PostController#index as HTML
   Rendered post/index.html.slim within layouts/application (7.3ms)
 Completed 200 OK in 12ms (Views: 11.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 16:54:43 +0800
+Processing by PostController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 26.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:03:41 +0800
+Processing by PostController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 35ms (Views: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:05:47 +0800
+Processing by PostController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:12:23 +0800
+Processing by PostController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 2.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:12:24 +0800
+Processing by PostController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:12:26 +0800
+Processing by PostController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:12:35 +0800
+Processing by PostController#index as HTML
+  Rendered post/index.html.slim within layouts/application (34.1ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (Missing block):
+    1: 
+    2: div id="posts"
+    3:  = form_for @posts 
+  app/views/post/index.html.slim:3:in `_app_views_post_index_html_slim___2005745337919173059_70294807156500'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:14:35 +0800
+Processing by PostController#index as HTML
+  Rendered post/index.html.slim within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `to_key' for #<Mongoid::Criteria:0x007fdd8d8bcb18>):
+    1: 
+    2: div id="posts"
+    3:  table
+    4:   = form_for @posts do | post |
+    5:    tr
+    6:     = post.content
+  app/views/post/index.html.slim:4:in `_app_views_post_index_html_slim___2005745337919173059_70294786154020'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (70.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 17:19:32 +0800
+Processing by PostController#index as HTML
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.010114999999999999s
+  Rendered post/index.html.slim within layouts/application (76.2ms)
+Completed 200 OK in 93ms (Views: 91.4ms)
