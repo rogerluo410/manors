@@ -6,14 +6,16 @@ class PostController < ApplicationController
   end
 
   def create
-    @post.content = params[:content] if params[:content].present?
-    @post.author_id = params[:author_id] if params[:author_id].present?
+    @post = Post.new
+    p params
+    @post.content = params[:post][:content] if params[:post][:content].present?
+    @post.author_id = params[:post][:author_id] if params[:post][:author_id].present?
     @post.publish_time = Time.now
 
     if @post.save
-      redirect_to '/posts', :alert => 'Create successfully.'
+      redirect_to '/post', :alert => 'Create successfully.'
     else
-      redirect_to '/posts', :alert => @post.errors.full_messages.join(',')
+      redirect_to '/post', :alert => @post.errors.full_messages.join(',')
     end
 
   end

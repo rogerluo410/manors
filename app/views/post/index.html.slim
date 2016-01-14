@@ -1,8 +1,4 @@
 a href="/post/new"  发布
 div id="post"
  p All Posts : 
- table
-  - @posts.each do | post |
-   tr
-    p "post: "
-     - post.content
+ = render partial: "posts"

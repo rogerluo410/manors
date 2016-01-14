@@ -1738,3 +1738,928 @@ ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007f8
   Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:26:10 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.023802s
+  Rendered post/index.html.slim within layouts/application (36.5ms)
+Completed 200 OK in 53ms (Views: 48.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:26:11 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000313s
+  Rendered post/index.html.slim within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.6ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:26:12 +0800
+Processing by PostController#new as HTML
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template post/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :slim, :coffee, :jbuilder]}. Searched in:
+  * "/Users/roger/Repos/manors/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (57.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.0ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (70.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:26:32 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00032399999999999996s
+  Rendered post/index.html.slim within layouts/application (10.9ms)
+Completed 200 OK in 13ms (Views: 12.4ms)
+
+
+Started GET "/post/create" for ::1 at 2016-01-14 14:26:34 +0800
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.5ms)
+
+
+Started GET "/post/create" for ::1 at 2016-01-14 14:26:42 +0800
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.3ms)
+
+
+Started GET "/post/create" for ::1 at 2016-01-14 14:26:53 +0800
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:29:19 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000344s
+  Rendered post/index.html.slim within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.0ms)
+
+
+Started GET "/post/create" for ::1 at 2016-01-14 14:29:20 +0800
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (64.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:29:31 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000421s
+  Rendered post/index.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:29:32 +0800
+Processing by PostController#new as HTML
+  Rendered post/new.html.slim within layouts/application (39.4ms)
+Completed 200 OK in 42ms (Views: 41.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:34:28 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.0006090000000000001s
+  Rendered post/index.html.slim within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 11.8ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:34:31 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (6.2ms)
+  Rendered post/new.html.slim within layouts/application (17.0ms)
+Completed 200 OK in 20ms (Views: 19.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 14:37:17 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000611s
+  Rendered post/index.html.slim within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 9.1ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:37:18 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (7.7ms)
+  Rendered post/new.html.slim within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 18ms
+
+SyntaxError (/Users/roger/Repos/manors/app/views/post/_form.html.slim:2: syntax error, unexpected ':', expecting ')'
+...safe((f.text_area :content， :size => "20x30"))).to_s)); 
+...                               ^):
+  app/views/post/_form.html.slim:2: syntax error, unexpected ':', expecting ')'
+  app/views/post/new.html.slim:3:in `_app_views_post_new_html_slim__1942567588238975845_70124180770460'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.2ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.1ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:37:41 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (6.2ms)
+  Rendered post/new.html.slim within layouts/application (7.3ms)
+Completed 200 OK in 16ms (Views: 14.7ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:37:44 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9CnY+MGSDErMjCDhqjcyFV+vwEuciibEw4HLR2T0kdqiyTpme/+1rzgnY1rsXJvimdhH7ZiNPE9f2EUjCe0JQ==", "post"=>{"content"=>""}, "commit"=>"发布"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `publish_time=' for nil:NilClass):
+  app/controllers/post_controller.rb:11:in `create'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.9ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (71.6ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:38:24 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (3.4ms)
+  Rendered post/new.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 11.0ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:39:09 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4fliy5L4GsAZO1UBirjF2qvyKhDY55BXvBNIwhJuvJe3GYBVKJWjJe2QFrrM02wtbYWtttzgitwgSsamf3ckA==", "post"=>{"content"=>""}, "commit"=>"发布"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `publish_time=' for nil:NilClass):
+  app/controllers/post_controller.rb:11:in `create'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.0ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (78.6ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:40:10 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4fliy5L4GsAZO1UBirjF2qvyKhDY55BXvBNIwhJuvJe3GYBVKJWjJe2QFrrM02wtbYWtttzgitwgSsamf3ckA==", "post"=>{"content"=>"ds"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569742ca8dee436844000001'), "publish_time"=>2016-01-14 06:40:10 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.337776s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 357ms
+
+
+Started GET "/posts" for ::1 at 2016-01-14 14:40:10 +0800
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/roger/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.4ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.2ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:40:52 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4fliy5L4GsAZO1UBirjF2qvyKhDY55BXvBNIwhJuvJe3GYBVKJWjJe2QFrrM02wtbYWtttzgitwgSsamf3ckA==", "post"=>{"content"=>"adadadas"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569742f48dee436844000002'), "publish_time"=>2016-01-14 06:40:52 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.006243s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 17ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:40:52 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.029117s
+  Rendered post/index.html.slim within layouts/application (30.3ms)
+Completed 200 OK in 43ms (Views: 41.8ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:42:02 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000414s
+  Rendered post/index.html.slim within layouts/application (8.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:42:12 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000406s
+  Rendered post/index.html.slim within layouts/application (7.5ms)
+Completed 200 OK in 11ms (Views: 11.0ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:42:16 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000666s
+  Rendered post/index.html.slim within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.7ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:43:58 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00043s
+  Rendered post/index.html.slim within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (Missing partial post/_post, application/_post with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :slim, :coffee, :jbuilder]}. Searched in:
+  * "/Users/roger/Repos/manors/app/views"
+):
+    1: a href="/post/new"  发布
+    2: div id="post"
+    3:  p All Posts : 
+    4:  = render partial: "post", collection: @posts
+  app/views/post/index.html.slim:4:in `_app_views_post_index_html_slim___392191802898311823_70124180442720'
+
+
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.0ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/roger/.rvm/gems/ruby-2.1.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.6ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:49:39 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4fliy5L4GsAZO1UBirjF2qvyKhDY55BXvBNIwhJuvJe3GYBVKJWjJe2QFrrM02wtbYWtttzgitwgSsamf3ckA==", "post"=>{"content"=>"adadadas"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569745038dee436844000003'), "publish_time"=>2016-01-14 06:49:39 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.001491s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 21ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:49:39 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000767s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00062s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000487s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.0006720000000000001s
+  Rendered post/_posts.html.slim (42.6ms)
+  Rendered post/index.html.slim within layouts/application (73.5ms)
+Completed 200 OK in 85ms (Views: 82.8ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:57:06 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (11.5ms)
+  Rendered post/new.html.slim within layouts/application (14.7ms)
+Completed 200 OK in 36ms (Views: 21.9ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:57:09 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjeP4EQSUlke0dni6fV2FN0JrGvxXrH4rhR5WbKmjgPbbAxqPvvkvokDdOwE7NizAhBydWlOrZKAZR9gIxLoYQ==", "post"=>{"content"=>"dsadasd"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569746c58dee436844000004'), "publish_time"=>2016-01-14 06:57:09 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.0005210000000000001s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 6ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:57:09 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.0005319999999999999s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000514s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000404s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00047000000000000004s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000531s
+  Rendered post/_posts.html.slim (15.2ms)
+  Rendered post/index.html.slim within layouts/application (17.6ms)
+Completed 200 OK in 20ms (Views: 19.3ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 14:58:59 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (1.8ms)
+  Rendered post/new.html.slim within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 9.3ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 14:59:09 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ixFgLdpSeAEsrkX5wGkBuPwITp/ipwtpLCvKtbet3eXSSuOnoLvO5rt86PctcK8fIxGQgXq3FwMCWqyMJhm7hw==", "post"=>{"content"=>"first blood!"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('5697473d8dee436844000005'), "content"=>"first blood!", "publish_time"=>2016-01-14 06:59:09 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.00046100000000000004s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 3ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 14:59:09 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00037600000000000003s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.0007930000000000001s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000355s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00044699999999999997s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000438s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000373s
+  Rendered post/_posts.html.slim (8.2ms)
+  Rendered post/index.html.slim within layouts/application (10.2ms)
+Completed 200 OK in 13ms (Views: 11.8ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:01:00 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000514s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000417s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000339s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00047900000000000004s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00032199999999999997s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000406s
+  Rendered post/_posts.html.slim (11.1ms)
+  Rendered post/index.html.slim within layouts/application (13.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:06:04 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000412s
+  Rendered post/_posts.html.slim (0.0ms)
+  Rendered post/index.html.slim within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 3.8ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 15:06:06 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (0.7ms)
+  Rendered post/new.html.slim within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 15:06:14 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kQluVvufmsu0US7YhNA5IxV9WYyVgemAdq+m2mX49a3IUu3cgXYsLCODg9ZpyZeEymSHkg2R9epY3sDj9EyTzw==", "post"=>{"content"=>"first blood!"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569748e68dee436844000006'), "content"=>"first blood!", "publish_time"=>2016-01-14 07:06:14 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.000395s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 2ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:06:14 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00040899999999999997s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00033999999999999997s
+  Rendered post/_posts.html.slim (0.9ms)
+  Rendered post/index.html.slim within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 5.0ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 15:06:17 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (0.9ms)
+  Rendered post/new.html.slim within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 6.1ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 15:06:25 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NLYneaw6rV0vdUqueLaCU3RNpLIhJ2/UReVxGa9AuqBt7aTz1tMburin56CVryz0q1R6rLk3c75rlBcgPvTcwg==", "post"=>{"content"=>"second blood!"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569748f18dee436844000007'), "content"=>"second blood!", "publish_time"=>2016-01-14 07:06:25 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.00082s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 4ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:06:25 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000406s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.00037s
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000287s
+  Rendered post/_posts.html.slim (1.8ms)
+  Rendered post/index.html.slim within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 6.4ms)
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:06:59 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000409s
+  Rendered post/_posts.html.slim (4.6ms)
+  Rendered post/index.html.slim within layouts/application (9.0ms)
+Completed 200 OK in 12ms (Views: 10.8ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 15:07:01 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (0.7ms)
+  Rendered post/new.html.slim within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 3.8ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 15:07:08 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9BsGs5/3JxTI+4WSBfzb9pbBtZzweFMzbe/HsxhaYOmtQIU55R6R818pKJzo5XVRSdhrgmhoT1lDnqGKie4Giw==", "post"=>{"content"=>"three"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('5697491c8dee436844000008'), "content"=>"three", "publish_time"=>2016-01-14 07:07:08 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.0007859999999999999s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 3ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:07:08 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000346s
+  Rendered post/_posts.html.slim (1.1ms)
+  Rendered post/index.html.slim within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 4.3ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 15:10:00 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (0.8ms)
+  Rendered post/new.html.slim within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 3.4ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 15:10:20 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4OblF2WJyYVXd0UZwJQmKYhxR6NHL+VbgYNc3k/g4rS5vWadH2B/YsCl6BctjYiOV2iZvd8/+TGv8jrn3lSE1g==", "post"=>{"content"=>"permit(*filters) public\r\nReturns a new ActionController::Parameters instance that includes only the given filters and sets the permitted attribute for the object to true. This is useful for limiting which attributes should be allowed for mass updating.\r\n\r\nparams = ActionController::Parameters.new(user: { name: 'Francesco', age: 22, role: 'admin' })\r\npermitted = params.require(:user).permit(:name, :age)\r\npermitted.permitted?      # => true\r\npermitted.has_key?(:name) # => true\r\npermitted.has_key?(:age)  # => true\r\npermitted.has_key?(:role) # => false"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('569749dc8dee436844000009'), "content"=>"permit(*filters) public\r\nReturns a new ActionController::Parameters instance that includes only the given filters and sets the permitted attribute for ...
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.000642s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 3ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:10:20 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.000415s
+  Rendered post/_posts.html.slim (1.3ms)
+  Rendered post/index.html.slim within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.4ms)
+
+
+Started GET "/post/new" for ::1 at 2016-01-14 15:10:36 +0800
+Processing by PostController#new as HTML
+  Rendered post/_form.html.slim (0.7ms)
+  Rendered post/new.html.slim within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started POST "/post" for ::1 at 2016-01-14 15:10:57 +0800
+Processing by PostController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8u7M6spQThxO3asM+qdhWXTz3pEvHM0t0g3WTFfeWqurtU9gsLn4+9kPBgIXvs/+q+oAj7cM0Uf8fLB1xmo8yQ==", "post"=>{"content"=>"在 Rails 中使用 JavaScript\r\n本文介绍 Rails 内建对 Ajax 和 JavaScript 等的支持，使用这些功能可以轻易的开发强大的 Ajax 程序。\r\n\r\n读完本文，你将学到：\r\n\r\nAjax 基本知识；\r\n非侵入式 JavaScript；\r\n如何使用 Rails 内建的帮助方法；\r\n如何在服务器端处理 Ajax；\r\nTurbolinks 简介；"}, "commit"=>"发布"}
+MONGODB | localhost:27017 | manors_development.insert | STARTED | {"insert"=>"posts", "documents"=>[{"_id"=>BSON::ObjectId('56974a018dee43684400000a'), "content"=>"在 Rails 中使用 JavaScript\r\n本文介绍 Rails 内建对 Ajax 和 JavaScript 等的支持，使用这些功能可以轻易的开发强大的 Ajax 程序。\r\n\r\n读完本文，你将学到：\r\n\r\nAjax 基本知识；\r\n非侵入式 JavaScript；\r\n如何使用...
+MONGODB | localhost:27017 | manors_development.insert | SUCCEEDED | 0.00047900000000000004s
+Redirected to http://localhost:3000/post
+Completed 302 Found in 3ms
+
+
+Started GET "/post" for ::1 at 2016-01-14 15:10:57 +0800
+Processing by PostController#index as HTML
+MONGODB | localhost:27017 | manors_development.find | STARTED | {"find"=>"posts", "filter"=>{}}
+MONGODB | localhost:27017 | manors_development.find | SUCCEEDED | 0.002546s
+  Rendered post/_posts.html.slim (3.5ms)
+  Rendered post/index.html.slim within layouts/application (4.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms)

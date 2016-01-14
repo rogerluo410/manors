@@ -1,0 +1,3 @@
+= form_for @post, url: {action: "create"} do |f| 
+  = f.text_area :content, :size => "50x20" 
+  = submit_tag '发布' 
