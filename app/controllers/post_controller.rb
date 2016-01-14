@@ -7,7 +7,6 @@ class PostController < ApplicationController
 
   def create
     @post = Post.new
-    p params
     @post.content = params[:post][:content] if params[:post][:content].present?
     @post.author_id = params[:post][:author_id] if params[:post][:author_id].present?
     @post.publish_time = Time.now
