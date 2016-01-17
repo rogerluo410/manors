@@ -1,6 +1,8 @@
-table
+table class="table table-condensed"
   tbody
     - @posts.each do | post |
       tr
-        td
+        td class="success"
           = post.content
+        td
+          a href="/reply/new"  回复  
