@@ -1,0 +1,3 @@
+= form_for @reply, url: {action: "create"} do |f| 
+  = f.text_area :content, :size => "50x20", :class=>"form-control"
+  = submit_tag '回复', :class=>"btn btn-success"

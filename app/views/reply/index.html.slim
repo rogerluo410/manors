@@ -1,0 +1,13 @@
+a href="/post"  返回
+div id="post-replies" class="container"
+ h3 
+  = @post.content
+  = render 'form'
+ table class="table table-striped"
+  tbody
+    - @post.replys.each do | rep |
+      tr
+        td
+          = rep.content
+        td
+          a href="/post/#{@post.id}/reply"  回复  

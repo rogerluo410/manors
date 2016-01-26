@@ -1,8 +1,8 @@
-table class="table table-condensed"
+table class="table table-striped"
   tbody
     - @posts.each do | post |
       tr
-        td class="success"
+        td
           = post.content
         td
-          a href="/reply/new"  回复  
+          a href="/post/#{post.id}/reply"  回复  

@@ -1,8 +1,8 @@
 class Reply
   include Mongoid::Document
+  include Mongoid::Timestamps::Short
   field :content, type: String
   field :author_id, type: Integer
-  field :reply_time, type: DateTime, default: ->{ Time.now }
   field :status, type: String, default: "active"
 
   default_scope ->{ where(status: "active").order(reply_time: :asc) }
