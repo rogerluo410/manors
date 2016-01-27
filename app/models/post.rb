@@ -6,7 +6,7 @@ class Post
   field :author_id, type: Integer
   field :status, type: String, default: "active"
 
-  default_scope ->{ where(status: "active").order(publish_time: :desc) }
+  default_scope ->{ where(status: "active").order(u_at: :desc) }
 
   has_many :replys, autosave: true
 

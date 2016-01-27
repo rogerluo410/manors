@@ -5,7 +5,7 @@ class Reply
   field :author_id, type: Integer
   field :status, type: String, default: "active"
 
-  default_scope ->{ where(status: "active").order(reply_time: :asc) }
+  default_scope ->{ where(status: "active").order(u_at: :asc) }
 
   belongs_to :post
 
