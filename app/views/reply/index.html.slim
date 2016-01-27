@@ -1,8 +1,9 @@
-a href="/post"  返回
 div id="post-replies" class="container"
- h3 
-  = @post.content
-  = render 'form'
+ div class="page-header"
+  h2 
+   = @post.content
+ = render 'form'
+ a href="/post" class="btn btn-warning" 返回
  table class="table table-striped"
   tbody
     - @post.replys.each do | rep |
@@ -10,4 +11,4 @@ div id="post-replies" class="container"
         td
           = rep.content
         td
-          a href="/post/#{@post.id}/reply"  回复  
+          a href="/post/#{@post.id}/reply"   回复  
