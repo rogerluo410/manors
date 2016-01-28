@@ -43,9 +43,9 @@ module Manors
     end
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    #config.assets.enabled = true
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    #config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
 
   end

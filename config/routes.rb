@@ -58,4 +58,5 @@ Rails.application.routes.draw do
   resources :post do
     resources :reply
   end
+  match "/images/uploads/*path" => "gridfs#serve", via: [:get, :post]
 end

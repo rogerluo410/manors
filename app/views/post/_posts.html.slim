@@ -4,5 +4,7 @@ table class="table table-striped"
       tr
         td
           = post.content
+          - post.images.each do | image |
+            = image_tag image.avatar_url(:thumb)
         td
           a href="/post/#{post.id}/reply"  回复  

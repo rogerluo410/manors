@@ -30,11 +30,18 @@ gem "bson_ext"
 # Paginate
 gem 'will_paginate'
 # Organizing items as a tree
-gem 'acts_as_tree'
+gem 'acts_as_tree'  
+
+# store image to GridFS of mongoDB
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', '>=1.9.0', github: 'ahoward/mongoid-grid_fs'
+gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
 
 # HTML tempelate
 gem 'slim'
 gem 'slim-rails'
+gem 'simple_form' 
 
 # Asset management
 gem 'sprockets-rails', '>=2.1.4'
