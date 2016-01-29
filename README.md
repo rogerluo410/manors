@@ -42,6 +42,6 @@ gem "bson_ext"
 and, create mongoDB configuring file `./config/mongoid.yml` with command `rails g mongoid:config`     
 
 #Establishing process  
-* Create model  ->  `rails g model User`   
-* Create controller -> `rails g controller users`   
+* Create model:  `rails g model User`   
+* Create controller:  `rails g controller users`   
 
