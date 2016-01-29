@@ -27,7 +27,7 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.       
 
-#Setup Marons environment    
+#Setup Manors environment    
 1. Create Marons    
 `rails new marons --skip-active-record`, then, `bundle install`         
 rails version is bigger than 4.2.   
@@ -41,7 +41,7 @@ gem "bson_ext"
 ```  
 and, create mongoDB configuring file `./config/mongoid.yml` with command `rails g mongoid:config`     
 
-#Establishing process  
+#Establishing recipes    
 * Create model:  `rails g model User`   
 * Create controller:  `rails g controller users`   
 
