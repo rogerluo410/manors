@@ -13,5 +13,4 @@ class Post
   
   accepts_nested_attributes_for :images
 
-  
 end

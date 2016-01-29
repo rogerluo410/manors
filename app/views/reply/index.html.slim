@@ -2,8 +2,8 @@ div id="post-replies" class="container"
  div class="page-header"
   h2 
    = @post.content
- = render 'form'
- a href="/post" class="btn btn-warning" 返回
+   - @post.images.each do | image |
+      = image_tag image.avatar_url(:thumb)
  table class="table table-striped"
   tbody
     - @post.replys.each do | rep |
@@ -11,4 +11,7 @@ div id="post-replies" class="container"
         td
           = rep.content
         td
-          a href="/post/#{@post.id}/reply"   回复  
+          a href="/post/#{@post.id}/reply"   回复       
+ = render 'form'
+ a href="/post" class="btn btn-warning" 返回
+ 

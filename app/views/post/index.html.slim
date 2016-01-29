@@ -1,16 +1,4 @@
 div id="post" class="container"
  p class="label label-info" All Posts : 
  = render partial: "posts"
- ul class="pagination"
-  li  
-    a href="/post" 
-      = 1
-  li
-    a href="/post" 
-      = 2
-  li
-    a href="/post"  
-      = 3
-  li 
-    a href="/post" 
-      = 4
+ = will_paginate @posts

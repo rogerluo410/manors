@@ -1,8 +1,7 @@
 class PostController < ApplicationController
 
   def index
-    @posts = Post.all
-    #render :text => 'success' , :status => 200 
+    @posts = Post.paginate(:page => params[:page], :per_page => 5)
   end
 
   def create
@@ -10,7 +9,7 @@ class PostController < ApplicationController
     @post.content = post_params[:content]
     post_params[:avatars].each do | avatar |
       @post.images.build(avatar: avatar)
-    end
+    end if post_params[:avatars].present?
     #@post.author_id = params[:post][:author_id]
 
     if @post.save

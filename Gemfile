@@ -28,9 +28,12 @@ gem 'mongoid', '~> 5.0.0'
 gem "bson_ext"
 
 # Paginate
-gem 'will_paginate'
+#gem 'will_paginate'
+gem 'will_paginate_mongoid'  
 # Organizing items as a tree
 gem 'acts_as_tree'  
+# Static page
+gem 'high_voltage', '~> 2.4.0'
 
 # store image to GridFS of mongoDB
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
