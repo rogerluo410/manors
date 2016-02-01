@@ -31,7 +31,7 @@ gem "bson_ext"
 #gem 'will_paginate'
 gem 'will_paginate_mongoid'  
 # Organizing items as a tree
-gem 'acts_as_tree'  
+#gem 'acts_as_tree'  #=>关系型数据库使用
 # Static page
 gem 'high_voltage', '~> 2.4.0'
 
@@ -56,8 +56,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'angularjs-rails'
 
 # Authentication
-#gem 'cancancan', '~> 1.10'  #=>dependence on active record
-gem 'devise'
+gem 'cancancan'
+gem 'devise' 
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
