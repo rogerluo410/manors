@@ -58,6 +58,7 @@ gem 'angularjs-rails'
 # Authentication
 gem 'cancancan'
 gem 'devise' 
+gem 'html2slim' #=> erb to slim  run : for file in app/views/devise/**/*.erb; do erb2slim $file ${file%erb}slim && rm $file; done
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

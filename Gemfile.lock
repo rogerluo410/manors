@@ -97,6 +97,9 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     high_voltage (2.4.0)
+    hpricot (0.8.6)
+    html2slim (0.2.0)
+      hpricot
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -220,6 +223,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   high_voltage (~> 2.4.0)
+  html2slim
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick!

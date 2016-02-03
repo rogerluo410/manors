@@ -9,6 +9,8 @@ div id="post-replies" class="container"
     - @post.replys.each do | rep |
       tr
         td
+          = "#{current_user.email} says:" 
+          p 
           = rep.content
         td
           a href="/post/#{@post.id}/reply"   回复       

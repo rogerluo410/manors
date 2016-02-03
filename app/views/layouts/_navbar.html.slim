@@ -3,4 +3,13 @@ nav class="navbar navbar-default navbar-fixed-top"
     div class="navbar-header float-left"
       a class="navbar-brand" href="/post" Manors
     div class="navbar-header float-right"
+      - if user_signed_in? 
+        = current_user.email
+        span |
+        = link_to "Sign out", destroy_user_session_path, :method => :delete
+      - else 
+        = link_to "Sign up", new_user_registration_path
+        span |
+        = link_to "Sign in", new_user_session_path
+    div class="navbar-header float-right"
       a class="navbar-brand" href="/post/new"  发布
