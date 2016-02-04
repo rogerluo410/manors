@@ -1,10 +1,17 @@
 table class="table table-striped"
   tbody
     - @posts.each do | post |
-      tr
-        td
-          = post.content
-          - post.images.each do | image |
+      tr 
+        div class="container steady_height" 
+          div class="container"
+           p
+            = simple_format(post.content)
+          div class="container interval" 
+           - post.images.each do | image |
             = image_tag image.avatar_url(:thumb)
-        td
-          a href="/post/#{post.id}/reply"  回复  
+          div class="steady_position" 
+           span 赞数: #{post.get_post_meta("ups")} &raquo;       
+           span 浏览数: #{post.get_post_meta("views")} &raquo;     
+           span 回复数: #{post.get_post_meta("replys")} &raquo;   
+           a href="/post/#{post.id}/reply"  回复    
+           

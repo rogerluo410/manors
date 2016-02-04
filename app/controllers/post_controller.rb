@@ -14,6 +14,7 @@ class PostController < ApplicationController
     #@post.author_id = params[:post][:author_id]
 
     if @post.save
+      @post.initialize_post_meta
       redirect_to '/post', :notice => 'Create successfully.'
     else
       redirect_to '/post', :alert => @post.errors.full_messages.join(',')

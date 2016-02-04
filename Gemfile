@@ -27,11 +27,14 @@ gem "responders"
 gem 'mongoid', '~> 5.0.0'
 gem "bson_ext"
 
+# Access Redis
+gem 'connection_pool'
+gem 'redis-objects'
+
 # Paginate
 #gem 'will_paginate'
 gem 'will_paginate_mongoid'  
-# Organizing items as a tree
-#gem 'acts_as_tree'  #=>关系型数据库使用
+
 # Static page
 gem 'high_voltage', '~> 2.4.0'
 
