@@ -73,3 +73,24 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+/* Adjust width and height
+-------------------------------------------------- */
+.steady_height {
+  position: relative;
+  border: 1px solid black;
+  margin: 1px 0px;
+  height:auto;
+}
+
+
+.steady_position {
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+}
+
+.interval {
+  margin-bottom: 20px;
+}
+

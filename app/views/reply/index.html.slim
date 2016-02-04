@@ -1,7 +1,6 @@
 div id="post-replies" class="container"
  div class="page-header"
-  h2 
-   = @post.content
+   = simple_format(@post.content)
    - @post.images.each do | image |
       = image_tag image.avatar_url(:thumb)
  table class="table table-striped"
@@ -9,7 +8,9 @@ div id="post-replies" class="container"
     - @post.replys.each do | rep |
       tr
         td
-          = rep.content
+          = "#{current_user.email} says:" 
+          p 
+          = simple_format(rep.content)
         td
           a href="/post/#{@post.id}/reply"   回复       
  = render 'form'

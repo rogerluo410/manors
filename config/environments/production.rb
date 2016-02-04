@@ -73,4 +73,8 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Config  Redis access
+  config.redis_server_host = "127.0.0.1"
+  config.redis_server_port = 6379
 end

@@ -39,4 +39,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Config  Redis access
+  config.redis_server_host = "127.0.0.1"
+  config.redis_server_port = 6379
 end

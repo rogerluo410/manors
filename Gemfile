@@ -27,11 +27,14 @@ gem "responders"
 gem 'mongoid', '~> 5.0.0'
 gem "bson_ext"
 
+# Access Redis
+gem 'connection_pool'
+gem 'redis-objects'
+
 # Paginate
 #gem 'will_paginate'
 gem 'will_paginate_mongoid'  
-# Organizing items as a tree
-gem 'acts_as_tree'  
+
 # Static page
 gem 'high_voltage', '~> 2.4.0'
 
@@ -56,8 +59,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'angularjs-rails'
 
 # Authentication
-#gem 'cancancan', '~> 1.10'  #=>dependence on active record
-gem 'devise'
+gem 'cancancan'
+gem 'devise' 
+gem 'html2slim' #=> erb to slim  run : for file in app/views/devise/**/*.erb; do erb2slim $file ${file%erb}slim && rm $file; done
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

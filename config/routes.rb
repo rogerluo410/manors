@@ -54,9 +54,11 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root to: 'post#index'
+  devise_for :users, :controllers => { :sessions => "users/sessions", :registrations => "users/registrations" }
 
   resources :post do
     resources :reply
   end
   match "/images/uploads/*path" => "gridfs#serve", via: [:get, :post]
+
 end

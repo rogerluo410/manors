@@ -13,4 +13,28 @@ class Post
   
   accepts_nested_attributes_for :images
 
+  def initialize_post_meta
+    @post_meta = Redis::HashKey.new("#{Post.name}:#{self.id.to_s}")
+    @post_meta["ups"] = 0
+    @post_meta["views"] = 0
+    @post_meta["replys"] = 0
+  end
+
+  def get_post_meta(key)
+    @post_meta ||= Redis::HashKey.new("#{Post.name}:#{self.id.to_s}")
+    @post_meta.fetch(key.to_s) do | key |
+      @post_meta[key] = 0
+    end
+  end
+
+  def set_post_meta(key)
+    @post_meta ||= Redis::HashKey.new("#{Post.name}:#{self.id.to_s}")
+    @post_meta["ups"] ||= 0
+    @post_meta["views"] ||= 0
+    @post_meta["replys"] ||= 0
+    @post_meta.incr('ups', 1) if key == "ups"
+    @post_meta.incr('views', 1) if key == "views"
+    @post_meta.incr('replys', 1) if key == "replys"
+  end
+
 end
