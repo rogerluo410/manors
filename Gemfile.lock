@@ -95,6 +95,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    fast-stemmer (1.0.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     high_voltage (2.4.0)
@@ -124,6 +125,9 @@ GEM
       mongo (~> 2.1)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
+    mongoid_search (0.3.2)
+      fast-stemmer (~> 1.0.0)
+      mongoid (>= 3.0.0)
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
@@ -234,6 +238,7 @@ DEPENDENCIES
   mini_magick!
   mongoid (~> 5.0.0)
   mongoid-grid_fs (>= 1.9.0)!
+  mongoid_search
   rails (= 4.2.5)
   redis-objects
   responders

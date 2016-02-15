@@ -1,4 +1,5 @@
 div id="post" class="container"
- p class="label label-info" All Posts : 
+ p class="label label-info float-left" All Posts : 
+ = render "search"
  = render partial: "posts"
  = will_paginate @posts
