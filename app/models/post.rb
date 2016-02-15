@@ -1,10 +1,12 @@
 class Post
   include Mongoid::Document
   include Mongoid::Timestamps::Short
+  include Mongoid::Search
   field :content, type: String
   field :labels, type: Array
   field :author_id, type: Integer
   field :status, type: String, default: "active"
+  index({content: "text" })
 
   default_scope ->{ where(status: "active").order(u_at: :desc) }
 
@@ -12,6 +14,9 @@ class Post
   embeds_many :images, cascade_callbacks: true
   
   accepts_nested_attributes_for :images
+
+  search_in :content
+  PER_PAGE = 8
 
   def initialize_post_meta
     @post_meta = Redis::HashKey.new("#{Post.name}:#{self.id.to_s}")

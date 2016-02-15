@@ -2,7 +2,7 @@ class PostController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 5)
+    @posts = Post.paginate(:page => params[:page], :per_page => Post::PER_PAGE)
   end
 
   def create
@@ -23,6 +23,12 @@ class PostController < ApplicationController
 
   def new
     @post = Post.new
+  end
+
+  def search
+    @posts = Post.full_text_search(params[:search_input])
+    @posts = @posts.paginate(:page => params[:page], :per_page => Post::PER_PAGE)
+    render :index
   end
 
   private
