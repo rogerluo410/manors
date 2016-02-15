@@ -8,7 +8,7 @@ table class="table table-striped"
             = simple_format(post.content)
           div class="container interval" 
            - post.images.each do | image |
-            = image_tag image.avatar_url(:thumb)
+            = image_tag(image.avatar_url(:thumb), :class=>'img-thumbnail')
           div class="steady_position" 
            span 赞数: #{post.get_post_meta("ups")} &raquo;       
            span 浏览数: #{post.get_post_meta("views")} &raquo;     
