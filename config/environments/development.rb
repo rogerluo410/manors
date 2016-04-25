@@ -39,4 +39,31 @@ Rails.application.configure do
   # Config  Redis access
   config.redis_server_host = "127.0.0.1"
   config.redis_server_port = 6379
+
+  config.action_mailer.delivery_method = :smtp
+  # Defaults to:
+  # config.action_mailer.sendmail_settings = {
+  #   :location => '/usr/sbin/sendmail',
+  #   :arguments => '-i -t'
+  # }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+    Rails.application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[Exception] ",
+    :sender_address => %{"Exception Notifier" <wh.yunlu.log@gmail.com>},
+    :exception_recipients => %w{rogerluo410@gmail.com},
+    :delivery_method => :smtp,
+    :smtp_settings => {
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :user_name => "wh.yunlu.log",
+      :password => "c@shcows",
+      :domain => "gmail.com",
+      :authentication => "plain", 
+      :enable_starttls_auto => true
+    }
+  }
+
 end

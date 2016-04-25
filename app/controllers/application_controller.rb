@@ -15,12 +15,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up)  { |u| u.permit(:email, :password, :password_confirmation, roles: []) }
   end
 
-  rescue_from Mongoid::Errors::DocumentNotFound, with: :record_not_found
+  #rescue_from Mongoid::Errors::DocumentNotFound, with: :record_not_found
 
   private
  
   def record_not_found
     #render plain: "404 Not Found", status: 404
+    #Rollbar.error('error',"232432423  Resource Not Found!")
+    #UserMailer.registration_confirmation.deliver
     redirect_to '/post', :alert =>"Resource Not Found!"
   end
 

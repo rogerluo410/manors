@@ -1,5 +1,5 @@
-source 'https://ruby.taobao.org'
-
+#source 'https://ruby.taobao.org'
+source 'https://gems.ruby-china.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -65,6 +65,16 @@ gem 'html2slim' #=> erb to slim  run : for file in app/views/devise/**/*.erb; do
 
 # full text search
 gem 'mongoid_search'
+
+# oauth
+gem 'omniauth-weibo-oauth2'
+
+# error tracking service
+gem 'rollbar', '~> 2.8.3'
+gem 'exception_notification'
+
+# HTTP client
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

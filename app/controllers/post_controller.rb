@@ -15,7 +15,11 @@ class PostController < ApplicationController
 
     if @post.save
       @post.initialize_post_meta
-      redirect_to '/post', :notice => 'Create successfully.'
+      #redirect_to '/post', :notice => 'Create successfully.'
+      respond_to do | format|
+       # format.html
+        format.json { render :json => { content: @post.content } }
+      end
     else
       redirect_to '/post', :alert => @post.errors.full_messages.join(',')
     end
@@ -28,7 +32,12 @@ class PostController < ApplicationController
   def search
     @posts = Post.full_text_search(params[:search_input])
     @posts = @posts.paginate(:page => params[:page], :per_page => Post::PER_PAGE)
-    render :index
+    #render :index
+
+   respond_to do | format|
+     # format.html
+      format.any { render :index }
+    end
   end
 
   private
