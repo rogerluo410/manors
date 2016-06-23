@@ -35,6 +35,12 @@ class User
   # field :locked_at,       type: Time
 
   field :roles_mask, type: String
+  
+  has_many :posts
+  has_many :notifications
+
+  accepts_nested_attributes_for :posts
+  accepts_nested_attributes_for :notifications
 
   ROLES = %i[admin author]
 

@@ -1,5 +1,5 @@
-source 'https://ruby.taobao.org'
-
+#source 'https://ruby.taobao.org'
+source 'http://mirrors.aliyun.com/rubygems/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -74,6 +74,11 @@ gem 'mongoid_search'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# web socket
+gem 'puma'
+gem 'redis-rails'
+gem 'tubesock'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

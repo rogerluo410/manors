@@ -10,6 +10,8 @@ class Post
 
   default_scope ->{ where(status: "active").order(u_at: :desc) }
 
+  belongs_to :user
+
   has_many :replys, autosave: true
   embeds_many :images, cascade_callbacks: true
   
@@ -17,6 +19,8 @@ class Post
 
   search_in :content
   PER_PAGE = 8
+
+  after_create :initialize_post_meta
 
   def initialize_post_meta
     @post_meta = Redis::HashKey.new("#{Post.name}:#{self.id.to_s}")

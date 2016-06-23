@@ -21,3 +21,18 @@
 //= require angular
 //= require angular-animate
 //= require angular-resource
+
+
+  var ws;
+	window.onload = function(){
+		  ws = new WebSocket("ws://localhost:3003/notify");
+		  ws.onmessage = function(e){  
+        alert(e.data);
+		    $("#notify_count").text("5");
+		  };
+
+	}
+
+	window.onclose = function(){
+	  ws.close();
+	}      

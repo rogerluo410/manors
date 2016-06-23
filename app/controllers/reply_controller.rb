@@ -12,6 +12,7 @@ class ReplyController < ApplicationController
     @post.replys.build({content: params[:reply][:content].presence, author_id: params[:reply][:author_id].presence})
     if @post.save
       @post.set_post_meta("replys")
+      NotificationSendingJob.perform_now id: @post.user.id, title: "#{params[:reply][:author_id]} replied the post", notify_type: Reply.name
       redirect_to "/post/#{@post.id.to_s}/reply", :notice => "回复成功"
     else
       redirect_to "/post/#{@post.id.to_s}/reply", :alert => @post.errors.full_messages.join(',')

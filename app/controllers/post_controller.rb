@@ -6,15 +6,15 @@ class PostController < ApplicationController
   end
 
   def create
-    @post = Post.new
-    @post.content = post_params[:content]
-    post_params[:avatars].each do | avatar |
-      @post.images.build(avatar: avatar)
-    end if post_params[:avatars].present?
-    #@post.author_id = params[:post][:author_id]
+    current_user.posts.build(
+        content: post_params[:content]
+      ).tap do | post |
+        post_params[:avatars].each do | avatar |
+            post.images.build(avatar: avatar)
+          end if post_params[:avatars].present?
+    end
 
-    if @post.save
-      @post.initialize_post_meta
+    if current_user.save
       redirect_to '/post', :notice => 'Create successfully.'
     else
       redirect_to '/post', :alert => @post.errors.full_messages.join(',')

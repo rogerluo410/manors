@@ -9,5 +9,4 @@ class Reply
 
   belongs_to :post
 
-
 end

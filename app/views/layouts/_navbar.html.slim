@@ -1,15 +1,17 @@
-nav class="navbar navbar-default navbar-fixed-top"
+nav class="navbar navbar-inverse navbar-fixed-top"
   div class="container"
-    div class="navbar-header float-left"
+    div class="navbar-header"
+      button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
+        span class="sr-only"  
+          Toggle navigation
+        span class="icon-bar"
+        span class="icon-bar"
+        span class="icon-bar"
       a class="navbar-brand" href="/post" Manors
-    div class="navbar-header float-right"
+    div class="navbar-collapse collapse" id="navbar"
       - if user_signed_in? 
-        = current_user.email
-        span |
-        = link_to "Sign out", destroy_user_session_path, :method => :delete
+        = render 'shared/profile'
       - else 
-        = link_to "Sign up", new_user_registration_path
-        span |
-        = link_to "Sign in", new_user_session_path
-    div class="navbar-header float-right"
-      a class="navbar-brand" href="/post/new"  发布
+        = render 'shared/login'
+    / div class="navbar-header float-right"
+    /   a class="navbar-brand" href="/post/new"  发布 

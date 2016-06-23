@@ -56,6 +56,8 @@ Rails.application.routes.draw do
   root to: 'post#index'
   devise_for :users, :controllers => { :sessions => "users/sessions", :registrations => "users/registrations" }
 
+  get "/notify", to: "notify#notify"
+
   resources :post do
     collection do
       get 'search'

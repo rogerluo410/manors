@@ -28,7 +28,7 @@ Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.       
 
 #Setup Manors environment    
-1. Create Marons    
+1. Create Manors    
 `rails new marons --skip-active-record`, then, `bundle install`         
 rails version is bigger than 4.2.   
 
@@ -44,4 +44,8 @@ and, create mongoDB configuring file `./config/mongoid.yml` with command `rails 
 #Establishing recipes    
 * Create model:  `rails g model User`   
 * Create controller:  `rails g controller users`   
+
+＃Dependencics  
+ brew install imagemagick  
+
 
