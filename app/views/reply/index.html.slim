@@ -1,18 +1,12 @@
-div id="post-replies" class="container"
+div class="container"
  div class="page-header"
    = simple_format(@post.content)
    - @post.images.each do | image |
       = image_tag(image.avatar_url(:thumb), :class=>'img-thumbnail')
  table class="table table-striped"
   tbody
-    - @post.replys.each do | rep |
-      tr
-        td
-          = "#{current_user.email} says:" 
-          p 
-          = simple_format(rep.content)
-        td
-          a href="/post/#{@post.id}/reply"   回复       
+    div id="post-replies"
+      = render 'reply_list'      
  = render 'form'
  a href="/post" class="btn btn-warning" 返回
  

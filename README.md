@@ -45,7 +45,7 @@ and, create mongoDB configuring file `./config/mongoid.yml` with command `rails 
 * Create model:  `rails g model User`   
 * Create controller:  `rails g controller users`   
 
-＃Dependencics  
+#Dependencies  
  brew install imagemagick  
 
 

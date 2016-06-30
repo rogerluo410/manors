@@ -15,9 +15,37 @@ ul class="nav navbar-nav pull-right"
 	      a href="#"
 	        = "Notifications" 
 	        span class="badge" id="notify_count"
-	          = "42"
+	          = current_user.notifications.count
 	    li role="separator" class="divider"
 	    li
-	      a href="#"
-	        = "Sign Out"
-	
+	      = link_to "Sign Out", destroy_user_session_path(), method: :delete
+
+erb:
+ <script>
+   var ws;
+	  window.onload = function(){
+		  ws = new WebSocket("ws://localhost:3003/notify");
+		  ws.onmessage = function(e){  
+	      alert(e.data + ' | '+ $("#notify_count").text()  + " | "+ "<%= current_user.notifications.count %>");
+		    $("#notify_count").text("<%= current_user.notifications.count  %>");
+
+
+		  };
+	  }    
+	  window.onclose = function(){
+	    ws.close();
+	  };     
+ </script>
+/ script
+/ 	| var ws;
+/ 	  window.onload = function(){
+/ 		  ws = new WebSocket("ws://localhost:3003/notify");
+/ 		  ws.onmessage = function(e){  
+/ 	      alert(e.data + $("#notify_count").text());
+/ 		    $("#notify_count").text("10"
+/ 		    );
+/ 		  };
+/ 	  }    
+/ 	  window.onclose = function(){
+/ 	    ws.close();
+/ 	  };     

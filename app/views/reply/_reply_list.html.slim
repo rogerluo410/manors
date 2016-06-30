@@ -1,0 +1,8 @@
+- @post.replys.each do | rep |
+    tr
+      td
+        = "#{current_user.email} says:" 
+        p 
+        = simple_format(rep.content)
+      td
+        a href="/post/#{@post.id}/reply"   回复 
